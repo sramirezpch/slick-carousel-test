@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Slider from 'react-slick';
 
-function App() {
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+export default () => {
+  const settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1500
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h2>Slider</h2>
+      <Slider {...settings}>
+        <div>
+          1
+        </div>
+        <div>
+          2
+        </div>
+        <div>
+          3
+        </div>
+      </Slider>
+    </>
+  )
 }
-
-export default App;
